@@ -110,6 +110,8 @@ class GovukSpider(scrapy.Spider):
 
     def select_filter_options(self, outward_code: str, special_category: str):
         self.home_page = GovukHomePage(self.driver)
+        time.sleep(random.uniform(0.5, 2))
+
         self.home_page.click_advanced_option()
         time.sleep(random.uniform(0.5, 2))
 
